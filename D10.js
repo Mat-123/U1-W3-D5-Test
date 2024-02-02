@@ -25,7 +25,7 @@ console.log("Esercizio B:", random);
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
-const me = {
+let me = {
   name: "Matteo",
   surname: "Montani",
   age: "33",
@@ -47,7 +47,7 @@ console.log("Esercizio D:", me);
 
 const skills = ["PASCAL", "PHP", "PYTHON"];
 
-me.skills;
+me.push(skills);
 
 console.log("Esercizio E:", me);
 
@@ -295,6 +295,8 @@ const movies = [
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+//function deleteProp (Obj, String)
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -302,6 +304,15 @@ const movies = [
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+
+function countMovies() {
+  for (let i = 0; movies.length; i++) {
+    if (movies[i].Title !== "") countMovies++;
+  }
+  return countMovies;
+}
+
+console.log("Esercizio 13:", countMovies());
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
